@@ -1,2 +1,4 @@
 # java-calculator
-Uma simple calculadora feita em Java.
+Uma simples calculadora feita em Java.
+
+Nesse projeto usei o switch case do Java para realizar as operações.
