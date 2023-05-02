@@ -1,15 +1,20 @@
+import java.util.Scanner;
+
 public class Calculator {
 
     public static void main(String[] args) {
-        // Exemplo de como usar o sistema: java Calculator 6 + 2
-        if (args.length < 3) {
-            System.out.println("Erro: sao necessarios 3 argumentos: num1, operacao e num2.");
-            System.exit(-1);
-        }
+        Scanner scanner = new Scanner(System.in);
 
-        int num1 = Integer.parseInt(args[0]); // Número 1 recebido pelo usuário
-        String operacao = args[1]; // Recebe a operação requerida pelo usuário
-        int num2 = Integer.parseInt(args[2]); // Número 2 recebido pelo usuário
+        System.out.print("Digite o primeiro número: ");
+        int num1 = scanner.nextInt(); // Número 1 recebido pelo usuário
+
+        System.out.printf("%d ", num1);
+        String operacao = scanner.next(); // Recebe a operação requerida pelo usuário
+
+        System.out.printf("%d %s ", num1, operacao);
+        int num2 = scanner.nextInt(); // Número 2 recebido pelo usuário
+
+        System.out.printf("%d %s %d -> ", num1, operacao, num2);
 
         switch (operacao) {
             case "somar", "soma", "+" -> somar(num1, num2);
